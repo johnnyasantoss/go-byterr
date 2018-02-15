@@ -39,6 +39,7 @@ func main() {
 	app.RunAndExitOnError()
 }
 
+// Transform the first arg from string to hex
 func stringToHex(c *cli.Context) error {
 	if c.NArg() > 0 {
 		firstArg := c.Args().First()
@@ -49,6 +50,7 @@ func stringToHex(c *cli.Context) error {
 	return nil
 }
 
+// Transform the first arg from hex to string
 func hexToString(c *cli.Context) error {
 	if c.NArg() > 0 {
 		firstArg := strings.TrimLeft(c.Args().First(), "0x")
